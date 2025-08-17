@@ -1,1 +1,8 @@
-ECHO is on.
+name: Print file contents
+on: [push]
+jobs:
+    print_my_file:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - run: cat hello_world.txt
